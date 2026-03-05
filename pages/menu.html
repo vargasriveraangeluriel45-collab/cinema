@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú - Cine Mexicano</title>
+  <link rel="stylesheet" href="../css/estilos_cine.css" />
+  <style>
+    /* ── Ajuste para que el nav quede perfectamente contenido en 68px ── */
+    html,
+    body {
+      height: 68px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      min-height: 68px;
+      height: 68px;
+      padding: 0 36px;
+      position: static;
+      /* no sticky en frame */
+    }
+
+    /* ── Search inline ── */
+    .search-form {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .search-form input[type="text"] {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(240, 192, 64, 0.25);
+      border-radius: 20px;
+      padding: 6px 14px;
+      color: #fff;
+      font-size: 0.82em;
+      font-family: 'Inter', sans-serif;
+      width: 0;
+      opacity: 0;
+      transition: width .35s ease, opacity .3s ease, border-color .25s;
+      pointer-events: none;
+    }
+
+    .search-form input[type="text"]::placeholder {
+      color: #666;
+    }
+
+    .search-form input[type="text"]:focus {
+      outline: none;
+      border-color: var(--gold-dim);
+    }
+
+    .search-form.open input[type="text"] {
+      width: 180px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .btn-search-icon {
+      background: rgba(240, 192, 64, 0.1);
+      border: 1px solid rgba(240, 192, 64, 0.25);
+      color: var(--gold);
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background .25s, border-color .25s;
+      flex-shrink: 0;
+    }
+
+    .btn-search-icon:hover {
+      background: rgba(240, 192, 64, 0.2);
+      border-color: var(--gold);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo-container" onclick="parent.frames['contenido'].location.href = 'principal.html'" role="button"
+      tabindex="0" aria-label="Ir a la página principal">
+      <h1 class="logo-text">🎬 CINE MEXICANO</h1>
+    </div>
+
+    <nav aria-label="Navegación principal">
+      <ul class="nav-links">
+        <li><a href="principal.html" target="contenido">Inicio</a></li>
+        <li><a href="contemporaneo.html" target="contenido">Contemporáneo</a></li>
+        <li><a href="cine_oro.html" target="contenido">Cine de Oro</a></li>
+        <li><a href="noticias.html" target="contenido">Noticias</a></li>
+        <li><a href="contacto.html" target="contenido">Contacto</a></li>
+        <li>
+          <form class="search-form" id="searchForm" onsubmit="ejecutarBusqueda(event)" role="search">
+            <input type="text" id="search-input" placeholder="Título, director, año…" autocomplete="off"
+              aria-label="Buscar películas" />
+            <button type="button" class="btn-search-icon" onclick="toggleSearch()" aria-label="Abrir o cerrar buscador"
+              title="Buscar">🔍</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    const form = document.getElementById('searchForm');
+    const input = document.getElementById('search-input');
+
+    function toggleSearch() {
+      const isOpen = form.classList.toggle('open');
+      if (isOpen) {
+        setTimeout(() => input.focus(), 50);
+      } else {
+        input.value = '';
+      }
+    }
+
+    function ejecutarBusqueda(e) {
+      if (e) e.preventDefault();
+      const q = input.value.trim();
+      if (!q) { input.focus(); return; }
+      parent.frames['contenido'].location.href = 'buscar.html?q=' + encodeURIComponent(q);
+      input.value = '';
+      form.classList.remove('open');
+    }
+
+    // Enter también busca cuando el form está abierto
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') ejecutarBusqueda(e);
+      if (e.key === 'Escape') {
+        input.value = '';
+        form.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+
+</html>

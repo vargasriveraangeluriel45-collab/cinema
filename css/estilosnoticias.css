@@ -1,0 +1,40 @@
+/* estilosnoticias.css — usa el sistema de estilos_cine.css como base */
+
+/* El modal de noticias se abre en columna */
+.movie-modal-overlay {
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.movie-modal-content {
+    flex-direction: column;
+    width: 95%;
+    max-width: 860px;
+    max-height: 88vh;
+    overflow-y: auto;
+    gap: 20px;
+}
+
+.modal-details {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding-right: 0;
+    padding-bottom: 20px;
+}
+
+.modal-details,
+.modal-trailer {
+    width: 100%;
+    flex: none;
+}
+
+.modal-trailer-container {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-trailer-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    max-height: 50vh;
+}

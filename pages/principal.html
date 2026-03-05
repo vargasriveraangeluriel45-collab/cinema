@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - Cine Mexicano</title>
+  <link rel="stylesheet" href="../css/estilos_cine.css" />
+</head>
+
+<body>
+  <section class="hero-section" style="background-image: url('../img/hero_banner.png');">
+    <div class="hero-text-container">
+      <h2 class="hero-text">Explora la Historia y el Legado del Cine Mexicano</h2>
+      <div style="margin-top: 28px">
+        <button class="btn-principal" onclick="parent.frames['contenido'].location.href = 'contemporaneo.html'">
+          Ver Cine Contemporáneo
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="filmstrip-divider" aria-hidden="true"></div>
+
+  <main class="main-content">
+    <h3 class="section-title">Películas Destacadas del Mes</h3>
+    <p class="description">
+      Una selección imperdible del cine mexicano reciente, desde animación hasta drama contemporáneo.
+    </p>
+
+    <div class="movies-grid">
+      <div class="movie-card" data-title="Soy Frankelda" data-year="2025" data-director="Hermanos Ambriz"
+        data-genre="Animación, Terror, Stop Motion"
+        data-sinopsis='Joven escritora de terror del siglo XIX es llevada al Reino de las Pesadillas para convertirse en la "pesadillera real" y devolver el miedo al mundo humano.'
+        data-trailer-url="https://www.youtube.com/embed/EE19ga5mq0c" data-movie-url="SOLO EN CINES"
+        onclick="mostrarDetalle(this)" role="button" tabindex="0"
+        onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+        <div class="movie-image">
+          <img src="https://i.pinimg.com/1200x/33/9d/09/339d09110d01ae40f708760230de326b.jpg" alt="Póster Soy Frankelda"
+            style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="movie-info">
+          <h4>Soy Frankelda</h4>
+          <span class="year">2025</span>
+          <p>Director: Hermanos Ambriz</p>
+          <p>Género: Animación, Terror, Stop Motion</p>
+        </div>
+      </div>
+
+      <div class="movie-card" data-title="Rudo y Cursi" data-year="2008" data-director="Carlos Cuarón"
+        data-genre="Comedia, Drama, Deportes"
+        data-sinopsis="Dos hermanos campesinos, Beto 'Rudo' y Darío 'Cursi', son descubiertos por un 'scout' de fútbol y llevados a la capital para convertirse en estrellas, desatando una rivalidad."
+        data-trailer-url="https://www.youtube.com/embed/zAMlwcJchoQ"
+        data-movie-url="https://archive.org/embed/RUDOYCURSI" onclick="mostrarDetalle(this)" role="button" tabindex="0"
+        onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+        <div class="movie-image">
+          <img src="https://i.pinimg.com/736x/69/3a/2a/693a2ad1c948fbde0340aa62c153b1d0.jpg" alt="Póster Rudo y Cursi"
+            style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="movie-info">
+          <h4>Rudo y Cursi</h4>
+          <span class="year">2008</span>
+          <p>Director: Carlos Cuarón</p>
+          <p>Género: Comedia, Drama, Deportes</p>
+        </div>
+      </div>
+
+      <div class="movie-card" data-title="No nos moverán" data-year="2024" data-director="Pierre Saint-Martin"
+        data-genre="Drama"
+        data-sinopsis="Abogada obsesionada con encontrar al soldado que mató a su hermano durante la masacre estudiantil de Tlatelolco en 1968 y llevar a cabo una venganza."
+        data-trailer-url="https://www.youtube.com/embed/CsXQHU87UtM"
+        data-movie-url="https://mubi.com/es/mx/films/no-nos-moveran" onclick="mostrarDetalle(this)" role="button"
+        tabindex="0" onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+        <div class="movie-image">
+          <img src="https://i.pinimg.com/736x/4f/dd/e4/4fdde44567f626891367af3d950f42dc.jpg" alt="Póster No nos moverán"
+            style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="movie-info">
+          <h4>No nos moverán</h4>
+          <span class="year">2024</span>
+          <p>Director: Pierre Saint-Martin</p>
+          <p>Género: Drama</p>
+        </div>
+      </div>
+
+      <div class="movie-card" data-title="Y tu Mamá También" data-year="2001" data-director="Alfonso Cuarón"
+        data-genre="Drama, Aventura"
+        data-sinopsis="Dos adolescentes y una mujer española de viaje a una playa secreta. Un recorrido por la geografía mexicana y el despertar sexual en el umbral de la vida adulta."
+        data-trailer-url="https://www.youtube.com/embed/UW1LQbtRuAM"
+        data-movie-url="https://archive.org/embed/y-tu-mama-tambien_202511" onclick="mostrarDetalle(this)" role="button"
+        tabindex="0" onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+        <div class="movie-image">
+          <img src="https://i.pinimg.com/736x/48/f6/09/48f60900e77a624abbf2a07ce371953c.jpg"
+            alt="Póster Y tu Mamá También" style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="movie-info">
+          <h4>Y tu Mamá También</h4>
+          <span class="year">2001</span>
+          <p>Director: Alfonso Cuarón</p>
+          <p>Género: Drama, Aventura</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <button class="btn-principal" onclick="parent.frames['contenido'].location.href = 'contemporaneo.html'">
+      VER TODA LA SELECCIÓN CONTEMPORÁNEA
+    </button>
+  </main>
+
+  <div id="movie-modal" class="movie-modal-overlay">
+    <div class="movie-modal-content">
+      <button class="close-button" onclick="cerrarDetalle()" aria-label="Cerrar detalles">✕</button>
+
+      <div class="modal-details">
+        <h3 id="modal-title"></h3>
+        <p><strong>Año:</strong> <span id="modal-year"></span></p>
+        <p><strong>Director:</strong> <span id="modal-director"></span></p>
+        <p><strong>Género:</strong> <span id="modal-genre"></span></p>
+        <hr style="border-color: #333; margin: 20px 0" />
+        <h4>Sinopsis</h4>
+        <p id="modal-sinopsis"></p>
+      </div>
+
+      <div class="modal-trailer">
+        <div id="trailer-container" class="modal-trailer-container">
+          <h4 style="color: var(--color-principal)">Tráiler Oficial</h4>
+          <iframe id="modal-trailer-iframe" src="" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            title="Reproductor de video del tráiler" allowfullscreen></iframe>
+
+          <button id="btn-ver-pelicula" class="btn-action-modal" onclick="abrirPelicula()">
+            VER PELÍCULA EN YOUTUBE 🚀
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Navegación</h4>
+        <p>
+          <a href="principal.html" target="contenido" style="color: white; text-decoration: none">Inicio</a>
+        </p>
+        <p>
+          <a href="contemporaneo.html" target="contenido" style="color: white; text-decoration: none">Contemporáneo</a>
+        </p>
+        <p>
+          <a href="cine_oro.html" target="contenido" style="color: white; text-decoration: none">Cine de Oro</a>
+        </p>
+        <p>
+          <a href="noticias.html" target="contenido" style="color: white; text-decoration: none">Noticias</a>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Contacto y Legal</h4>
+        <p>
+          <a href="contacto.html" target="contenido" style="color: white; text-decoration: none">Formulario de
+            Contacto</a>
+        </p>
+        <p style="color: #aaa">📧 contacto@mexacinema.mx</p>
+      </div>
+      <div class="footer-section">
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="https://www.x.com" target="_blank" rel="noopener" aria-label="X / Twitter">TW</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sub-footer">
+    <p>© 2025 MexaCinema - Todos los derechos reservados.</p>
+  </div>
+
+  <script src="../js/metodos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine de Oro</title>
+    <link rel="stylesheet" href="../css/estilos_cine.css">
+</head>
+
+<body>
+    <div class="filmstrip-divider" aria-hidden="true"></div>
+<main class="main-content">
+        <h2 class="section-title">La Época de Oro del Cine Mexicano</h2>
+        <p class="description">Un recorrido por los clásicos que consolidaron la cinematografía nacional como una de las
+            más importantes de Hispanoamérica.</p>
+
+        <div class="movies-grid">
+
+            <div class="movie-card" data-title="Los Olvidados" data-year="1950" data-director="Luis Buñuel"
+                data-genre="Drama, Neorrealismo"
+                data-sinopsis="Un grupo de niños y adolescentes viven en la miseria de los suburbios de la Ciudad de México, donde la violencia y la delincuencia son su única realidad."
+                data-trailer-url="https://www.youtube.com/embed/yFghaQAZdYg?si=DFzjduvOCRMOC2Ws"
+                data-movie-url="https://archive.org/embed/LosOlvidadosLuisBunuel1950Spanish"
+                onclick="mostrarDetalle(this)" role="button" tabindex="0"
+                onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://i.pinimg.com/1200x/ae/c9/12/aec9123abae3b8aa384a4b78ffd9bda0.jpg"
+                        alt="Póster Los Olvidados" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>Los Olvidados</h4>
+                    <span class="year">1950</span>
+                    <p>Director: Luis Buñuel</p>
+                    <p>Género: Drama, Neorrealismo</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="Nosotros los Pobres" data-year="1948" data-director="Ismael Rodríguez"
+                data-genre="Melodrama"
+                data-sinopsis="La vida de Pepe 'El Toro', un carpintero del barrio humilde, su ahijada 'Chachita' y su novia Celia, enfrentando la pobreza y las tragedias de la época."
+                data-trailer-url="https://www.youtube.com/embed/9HG_qiDsf-c?si=15nzYMjCysvy7i8w"
+                data-movie-url="https://archive.org/embed/nosotros-los-pobres-1948" onclick="mostrarDetalle(this)"
+                role="button" tabindex="0" onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://i.pinimg.com/736x/93/20/32/932032843385ff62a7e25e246a44448c.jpg"
+                        alt="Póster Nosotros los Pobres" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>Nosotros los Pobres</h4>
+                    <span class="year">1948</span>
+                    <p>Director: Ismael Rodríguez</p>
+                    <p>Género: Melodrama</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="Dos Tipos de Cuidado" data-year="1953" data-director="Ismael Rodríguez"
+                data-genre="Comedia Ranchera"
+                data-sinopsis="Dos amigos de la infancia, que se quieren como hermanos, se enfrentan por el amor de la misma mujer en una historia llena de música y enredos."
+                data-trailer-url="https://www.youtube.com/embed/ep4NpklX90I?si=I2UOUhN25v6OhmHW"
+                data-movie-url="https://archive.org/embed/001.-colorizada-pedro-infante-peliculas-completas-dos-tipos-de-cuidado-1952-colo"
+                onclick="mostrarDetalle(this)" role="button" tabindex="0"
+                onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://i.pinimg.com/736x/05/50/06/0550067c2c5417d2e1540480a8b85882.jpg"
+                        alt="Póster Dos Tipos de Cuidado" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>Dos Tipos de Cuidado</h4>
+                    <span class="year">1953</span>
+                    <p>Director: Ismael Rodríguez</p>
+                    <p>Género: Comedia Ranchera</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="Aventurera" data-year="1949" data-director="Alberto Gout"
+                data-genre="Cine de Rumberas, Melodrama"
+                data-sinopsis="Una joven es engañada y obligada a trabajar en un cabaret como 'rumbera', ascendiendo socialmente pero sin olvidar su tragedia personal."
+                data-trailer-url="https://www.youtube.com/embed/nmJVyecb_JY?si=dcKPncvlkBuQpxaY"
+                data-movie-url="https://youtu.be/pGBDfAWExAw?si=eY4JvjlN9EiXKsmf" onclick="mostrarDetalle(this)"
+                role="button" tabindex="0" onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://a.ltrbxd.com/resized/film-poster/9/1/3/5/6/91356-aventurera-0-1000-0-1500-crop.jpg?v=60d612bd67"
+                        alt="Póster Aventurera" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>Aventurera</h4>
+                    <span class="year">1949</span>
+                    <p>Director: Alberto Gout</p>
+                    <p>Género: Cine de Rumberas, Melodrama</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="El Ángel Exterminador" data-year="1962" data-director="Luis Buñuel"
+                data-genre="Drama, Surrealismo"
+                data-sinopsis="Un grupo de burgueses, tras una cena, se encuentran inexplicablemente incapaces de salir de un lujoso salón, desatando el caos y la regresión social."
+                data-trailer-url="https://www.youtube.com/embed/ysYG7qaz29c?si=XYzT2Day6ZlaqqAF"
+                data-movie-url="https://archive.org/embed/angel-exterminador-el-1962-1080p"
+                onclick="mostrarDetalle(this)" role="button" tabindex="0"
+                onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://i.pinimg.com/736x/1f/7f/a7/1f7fa76e0e0b6a9161854b8bbefff872.jpg"
+                        alt="Póster El Ángel Exterminador" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>El Ángel Exterminador</h4>
+                    <span class="year">1962</span>
+                    <p>Director: Luis Buñuel</p>
+                    <p>Género: Drama, Surrealismo</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="María Candelaria" data-year="1944" data-director="Emilio Fernández"
+                data-genre="Drama, Romance"
+                data-sinopsis="La trágica historia de amor de una joven indígena, María Candelaria, y su novio Lorenzo Rafael en Xochimilco, enfrentados a la superstición y el prejuicio."
+                data-trailer-url="https://www.youtube.com/embed/3qgYGde9xoM?si=ctS8im_a3Sbz7nEZ"
+                data-movie-url="https://youtu.be/Rh-I7j1YYwE?si=ZqPXlWS_rakBxWUG" onclick="mostrarDetalle(this)"
+                role="button" tabindex="0" onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://i.pinimg.com/736x/4c/76/9f/4c769f5ec8768c4f266ebfe9be053c81.jpg"
+                        alt="Póster María Candelaria" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>María Candelaria</h4>
+                    <span class="year">1944</span>
+                    <p>Director: Emilio Fernández</p>
+                    <p>Género: Drama, Romance</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="Macario" data-year="1960" data-director="Roberto Gavaldón"
+                data-genre="Fantasía, Drama"
+                data-sinopsis="Un humilde campesino en la época del virreinato anhela poder comer un pavo entero él solo, y su deseo lo lleva a un encuentro con La Muerte."
+                data-trailer-url="https://www.youtube.com/embed/JQGcu3j4CdM?si=5Y-lK7uD1LcqGD4T"
+                data-movie-url="https://archive.org/embed/macario_202209" onclick="mostrarDetalle(this)" role="button"
+                tabindex="0" onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://i.pinimg.com/1200x/ff/f0/a7/fff0a73e5082c6c7b219211848c45810.jpg"
+                        alt="Póster Macario" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>Macario</h4>
+                    <span class="year">1960</span>
+                    <p>Director: Roberto Gavaldón</p>
+                    <p>Género: Fantasía, Drama</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="La Ley de Herodes" data-year="1999" data-director="Luis Estrada"
+                data-genre="Sátira, Comedia Negra"
+                data-sinopsis="Un humilde basurero es nombrado alcalde interino de un pueblo remoto y, a pesar de sus buenas intenciones iniciales, sucumbe a la corrupción y el abuso de poder."
+                data-trailer-url="https://www.youtube.com/embed/D-i9VJpKI3U?si=vCO2Ssj_3JWnCfkh"
+                data-movie-url="https://archive.org/embed/LUISESTRADALaLeyDeHerodes1999" onclick="mostrarDetalle(this)"
+                role="button" tabindex="0" onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://i.pinimg.com/1200x/c1/01/f3/c101f345963ba4bb83ad299397fa3af7.jpg"
+                        alt="Póster La Ley de Herodes" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>La Ley de Herodes</h4>
+                    <span class="year">1999</span>
+                    <p>Director: Luis Estrada</p>
+                    <p>Género: Sátira, Comedia Negra</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="Ahí está el Detalle" data-year="1940" data-director="Juan Bustillo Oro"
+                data-genre="Comedia, Enredos"
+                data-sinopsis="Un malentendido con un perro llamado 'El Detalle' provoca una cadena de confusiones que involucran a un millonario, su esposa, y un desempleado con un ingenio particular."
+                data-trailer-url="https://www.youtube.com/embed/GSqP7R4YYrY?si=_o-BfW8z7p1T1q75"
+                data-movie-url="https://archive.org/embed/ahiestaeldetalle1940" onclick="mostrarDetalle(this)"
+                role="button" tabindex="0" onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://i.pinimg.com/736x/89/a4/7a/89a47a5bdfee5576abcb023662f29a95.jpg"
+                        alt="Póster Ahí está el Detalle" style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>Ahí está el Detalle</h4>
+                    <span class="year">1940</span>
+                    <p>Director: Juan Bustillo Oro</p>
+                    <p>Género: Comedia, Enredos</p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="El Esqueleto de la Señora Morales" data-year="1960"
+                data-director="Rogelio A. González" data-genre="Comedia Negra"
+                data-sinopsis="Un taxidermista vive oprimido por su esposa, hasta que un día ella desaparece y él comienza a tener una vida social mucho más activa."
+                data-trailer-url="https://www.youtube.com/embed/3JrZ_yTLOfI?si=qRXxtnYdgyk0uLYZ"
+                data-movie-url="https://archive.org/embed/el-esqueleto-de-la-senora-morales-1960"
+                onclick="mostrarDetalle(this)" role="button" tabindex="0"
+                onkeypress="if(event.key === 'Enter') mostrarDetalle(this);">
+                <div class="movie-image">
+                    <img src="https://a.ltrbxd.com/resized/film-poster/9/3/4/8/5/93485-the-skeleton-of-mrs-morales-0-1000-0-1500-crop.jpg?v=6dd1f6224d"
+                        alt="Póster El Esqueleto de la Señora Morales"
+                        style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="movie-info">
+                    <h4>El Esqueleto de la Señora Morales</h4>
+                    <span class="year">1960</span>
+                    <p>Director: Rogelio A. González</p>
+                    <p>Género: Comedia Negra</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="movie-modal" class="movie-modal-overlay">
+        <div class="movie-modal-content">
+            <button class="close-button" onclick="cerrarDetalle()" aria-label="Cerrar detalles">✕</button>
+            <div class="modal-details">
+                <h3 id="modal-title"></h3>
+                <p><strong>Año:</strong> <span id="modal-year"></span></p>
+                <p><strong>Director:</strong> <span id="modal-director"></span></p>
+                <p><strong>Género:</strong> <span id="modal-genre"></span></p>
+                <hr style="border-color: #333; margin: 20px 0;">
+                <h4>Sinopsis</h4>
+                <p id="modal-sinopsis"></p>
+            </div>
+            <div class="modal-trailer">
+                <div id="trailer-container" class="modal-trailer-container">
+                    <h4 style="color: var(--color-principal);">Tráiler Oficial</h4>
+                    <iframe id="modal-trailer-iframe" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        title="Reproductor de video del tráiler" allowfullscreen></iframe>
+                    <button id="btn-ver-pelicula" class="btn-action-modal" onclick="abrirPelicula()">VER PELÍCULA EN
+                        YOUTUBE 🚀</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-main">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <p><a href="principal.html" target="contenido" style="color:white; text-decoration:none;">Inicio</a>
+                </p>
+                <p><a href="contemporaneo.html" target="contenido"
+                        style="color:white; text-decoration:none;">Contemporáneo</a></p>
+                <p><a href="cine_oro.html" target="contenido" style="color:white; text-decoration:none;">Cine de
+                        Oro</a>
+
+                </p>
+                <p><a href="noticias.html" target="contenido" style="color:white; text-decoration:none;">Noticias</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto y Legal</h4>
+                <p><a href="contacto.html" target="contenido" style="color:white; text-decoration:none;">Formulario
+                        de
+                        Contacto</a></p>
+                <p style="color:#aaa;">📧 contacto@cinemexicano.mx</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                    <a href="https://www.x.com" target="_blank" rel="noopener" aria-label="X / Twitter">TW</a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <p>© 2025 Cine Mexicano - Todos los derechos reservados.</p>
+    </div>
+
+    <script src="../js/metodos.js"></script>
+</body>
+
+</html>

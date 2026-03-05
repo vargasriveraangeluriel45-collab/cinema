@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Búsqueda — Cine Mexicano</title>
+    <link rel="stylesheet" href="../css/estilos_cine.css" />
+    <style>
+        .search-header {
+            padding: 44px 32px 0;
+            text-align: center;
+        }
+
+        .search-header h2 {
+            font-family: var(--font-title);
+            color: var(--gold);
+            font-size: 2em;
+            margin: 0 0 6px;
+        }
+
+        .search-header p {
+            color: var(--text-muted);
+            margin: 0 0 36px;
+        }
+
+        .search-tag {
+            display: inline-block;
+            font-size: 0.75em;
+            background: rgba(139, 26, 26, 0.3);
+            color: var(--gold);
+            border-radius: 20px;
+            padding: 2px 10px;
+            margin-top: 6px;
+            border: 1px solid rgba(240, 192, 64, 0.2);
+        }
+
+        .search-empty {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            padding: 60px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        #search-results {
+            justify-content: flex-start;
+        }
+
+        .search-count-bar {
+            color: var(--text-muted);
+            font-size: 0.88em;
+            margin-bottom: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        .search-count-bar span {
+            color: var(--gold);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-content">
+        <div class="search-header">
+            <h2>🔍 Resultados de búsqueda</h2>
+            <p>Mostrando resultados para: <strong style="color:var(--gold)" id="search-query"></strong></p>
+            <p class="search-count-bar">Se encontraron <span id="search-count">0</span> película(s)</p>
+        </div>
+
+        <div class="movies-grid" id="search-results">
+            <!-- Los resultados se generan en buscar.js -->
+        </div>
+    </main>
+
+    <!-- Modal de película — mismo que contemporaneo/cine_oro -->
+    <div id="movie-modal" class="movie-modal-overlay">
+        <div class="movie-modal-content">
+            <button class="close-button" onclick="cerrarDetalle()" aria-label="Cerrar detalles">✕</button>
+
+            <div class="modal-details">
+                <h3 id="modal-title"></h3>
+                <p><strong>Año:</strong> <span id="modal-year"></span></p>
+                <p><strong>Director:</strong> <span id="modal-director"></span></p>
+                <p><strong>Género:</strong> <span id="modal-genre"></span></p>
+                <hr style="border-color: #333; margin: 20px 0" />
+                <h4>Sinopsis</h4>
+                <p id="modal-sinopsis"></p>
+            </div>
+
+            <div class="modal-trailer">
+                <div id="trailer-container" class="modal-trailer-container">
+                    <h4 style="color: var(--color-principal)">Tráiler Oficial</h4>
+                    <iframe id="modal-trailer-iframe" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        title="Reproductor de video del tráiler" allowfullscreen></iframe>
+
+                    <button id="btn-ver-pelicula" class="btn-action-modal" onclick="abrirPelicula()">
+                        VER PELÍCULA 🚀
+                    </button>
+                </div>
+                <div id="movie-player-container" style="display: none"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-main">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <p><a href="principal.html" target="contenido">Inicio</a></p>
+                <p><a href="contemporaneo.html" target="contenido">Contemporáneo</a></p>
+                <p><a href="cine_oro.html" target="contenido">Cine de Oro</a></p>
+                <p><a href="noticias.html" target="contenido">Noticias</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto y Legal</h4>
+                <p><a href="contacto.html" target="contenido">Formulario de Contacto</a></p>
+                <p style="color:#555">📧 contacto@cinemexicano.mx</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                    <a href="https://www.x.com" target="_blank" rel="noopener" aria-label="X / Twitter">TW</a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="sub-footer">
+        <p>© 2025 Cine Mexicano — Todos los derechos reservados.</p>
+    </div>
+
+    <script src="../js/metodos.js"></script>
+    <script src="../js/buscar.js"></script>
+</body>
+
+</html>
